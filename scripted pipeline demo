@@ -1,0 +1,32 @@
+node {
+    stage("pull source code from scm"){
+        git branch: 'main', url: 'https://github.com/hshinde1301/cloudtest.git'
+    }
+    
+    stage (" Build Docker file") {
+        sh 'docker image build -t $JOB_NAME:v1.$BUILD_ID .'
+        sh 'docker image tag $JOB_NAME:v1.$BUILD_ID hshinde1301/$JOB_NAME:v1.$BUILD_ID '
+        sh 'docker image tag $JOB_NAME:v1.$BUILD_ID hshinde1301/$JOB_NAME:latest' 
+    } 
+    
+    stage (" Push image to dockerhub") {
+        withCredentials([string(credentialsId: 'dockerhub_pwd', variable: 'dockerhub_pwd')]) {
+        sh 'docker login -u hshinde1301 -p ${dockerhub_pwd}'
+        sh 'docker image push hshinde1301/$JOB_NAME:v1.$BUILD_ID '
+        sh 'docker image push hshinde1301/$JOB_NAME:latest' 
+        sh 'docker image rmi $JOB_NAME:v1.$BUILD_ID hshinde1301/$JOB_NAME:v1.$BUILD_ID hshinde1301/$JOB_NAME:latest '
+}
+        
+    }
+    stage ("deploy docker container ") {
+        def dockerrun = 'docker run -p 8000:80 -d --name cloudtest hshinde1301/scripted_pipeline:latest'
+        def dockerd = 'docker container rm -f cloudtest'
+        def dockrdimg = 'docker image rmi hshinde1301/scripted_pipeline '
+        sshagent(['dockerhost_cred']) {
+            sh "ssh -o StrictHostKeyChecking=no root@172.31.34.128 ${dockerd}"
+            sh "ssh -o StrictHostKeyChecking=no root@172.31.34.128 ${dockrdimg}"
+            sh "ssh -o StrictHostKeyChecking=no root@172.31.34.128 ${dockerrun}"
+             
+}
+    }
+}
