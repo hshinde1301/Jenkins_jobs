@@ -1,0 +1,207 @@
+Started by GitHub push by hshinde1301
+[8mha:////4K92gSmo7QmDP5yzUY0EQG67JTIl+3EeipRZZDfjfvARAAAAoh+LCAAAAAAAAP9tjTEOwjAQBM8BClpKHuFItIiK1krDC0x8GCfWnbEdkooX8TX+gCESFVvtrLSa5wtWKcKBo5UdUu8otU4GP9jS5Mixv3geZcdn2TIl9igbHBs2eJyx4YwwR1SwULBGaj0nRzbDRnX6rmuvydanHMu2V1A5c4MHCFXMWcf8hSnC9jqYxPTz/BXAFEIGsfuclm8zQVqFvQAAAA==[0m[Pipeline] Start of Pipeline
+[8mha:////4FZkxN42XzZ90nJNC0SCAhyA/PpLqYeqNl+Heam4Z7uqAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycohUghExsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jduZBmjwAAAAA==[0m[Pipeline] node
+Running on [8mha:////4KC/aI+065lTRUOfmgK0dzlbN/CFcKS8mNr6+ZeQ4UkQAAAAoR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZR/eT83ILSktQifY2k0sycEt3MPE19AHHxbH3KAAAA[0mJenkins in /var/lib/jenkins/workspace/scripted_pipeline
+[8mha:////4PiUFk2Frm1xguB1U83Ds3fRkcDy3Zwy5pXyjws+VjROAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gA0xsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jfoP95RwAAAAA==[0m[Pipeline] {
+[8mha:////4CDbGXuGRpzflVmuunFhgZ07br9BdWGt8lH8KL/bzOUBAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gQkxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jc09154wAAAAA==[0m[Pipeline] stage
+[8mha:////4IG5mQCREv2DWyBV6aF9bH0L8GWvrzPeLaw9/McTQKiKAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0ggUxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jek7ggRwAAAAA==[0m[Pipeline] { (pull source code from scm)
+[8mha:////4E1ASMRt2jFyDUDvBxUCPuzds67zZXWx7Hhpz8kLtyhSAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbaWGsbAmNJ0AWEZb8zwLrbuWJvJp3kLiJlZNMMm+a93rDOic4UbLcG+wdZu14DKOti0+U+lugiXu6ck2YKRguzSSpM+cFJRUDS1gDKwEbgzpQdmgLbIVXD9UGhba9lFS/o4DGdQM8gYlqLiqVL8wJdvexy4Q/z18BzLEA29ce4gfg7KmOvAAAAA==[0m[Pipeline] git
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/scripted_pipeline/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/hshinde1301/cloudtest.git # timeout=10
+Fetching upstream changes from https://github.com/hshinde1301/cloudtest.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.43.0'
+ > git fetch --tags --force --progress -- https://github.com/hshinde1301/cloudtest.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 3021923b6f942ecc4f830f571e4481fc0129ee52 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 3021923b6f942ecc4f830f571e4481fc0129ee52 # timeout=10
+ > git branch -a -v --no-abbrev # timeout=10
+ > git branch -D main # timeout=10
+ > git checkout -b main 3021923b6f942ecc4f830f571e4481fc0129ee52 # timeout=10
+Commit message: "Update Dockerfile OEL2"
+ > git rev-list --no-walk 853460bb34cec375cd18608c97ee59c2da74c409 # timeout=10
+[8mha:////4KnVW3LTMCvfHokloE51d6P3Uaetp982rjiE0Nr7V+zpAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbGRNjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI6xADvU7j9Dg2gqvAAAAA==[0m[Pipeline] }
+[8mha:////4GKoW6U1mPfFY9OFLCvovTXJdanwSM8YWfX3ltn1T04oAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQRbWRhjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI6xADvU7j9J+wGOvAAAAA==[0m[Pipeline] // stage
+[8mha:////4NPhLCzv+DI4rsqOPDAQwKrKoracjMp4ntZFRrXTuZqCAAAAph+LCAAAAAAAAP9tjTEOwjAQBM9BKWgpeYQDEh2iorXc8AITG+PEugv2haTiRXyNPxCIRMVWOyut5vmCMic4UPKycdgGzHWQXez91ORAqb1EGmRDZ1kTZopOajdosu44oyZ2MEcUsFCwdFhHygE9w0o15m6qaNBXJ07TtldQBHuDBwg1mdkk/sKYYH3tbSb8ef4KYOwYxI6h2G4+x/INtuQqUcEAAAA=[0m[Pipeline] stage
+[8mha:////4HBK+oWajoxkByX6Fn9CPMRQu+9Gd3ls1xiZ5dbCXDOkAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+DOrAycoiUzoiJNerCCUITQtLo/zZJSSdOxNW4Ay2VmPBg2Zas93pDGQOcKBjuNHYWY2t570czJ54pdDdPmTu68pYwkte80bkhpc9rbShpWFUw2AjYamw9RYsmwU44+ZCVl2iqSwrzdhTArBrgCYWYyUmG9C1TgP19VJHwx/kLgKlPwOrDYvXyLD8BobDcwgAAAA==[0m[Pipeline] { ( Build Docker file)
+[8mha:////4DdmF81iN/SIJ3hiCunJSeCJX3qdpQ0efW20c4dOjKFGAAAAox+LCAAAAAAAAP9tjTESwiAURH/iWNhaeggysXWsbBkaT4AJIoT5nwCRVJ7Iq3kH0cxYucXOvm3e8wXrGOBIQTOrcDAYO8O8m3RZLFMYro4ys3RhHWEkp5hQWVCvTgsKSgqWVDWsOGwUdo6iQZ1gy628y8ZJ1M05hfIdONSmH+EBFS/mJEP6whxgd5v6SPjz/BXA7BPUbfupvX8DpQJrNb4AAAA=[0m[Pipeline] sh
++ docker image build -t scripted_pipeline:v1.44 .
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 340B done
+#1 DONE 0.0s
+
+#2 [auth] library/oraclelinux:pull token for registry-1.docker.io
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/oraclelinux:8
+#3 DONE 0.8s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/oraclelinux:8@sha256:4d0de03528af639920c9d6911a722091aa66f616912d8a2f154098e20cfb2b0c
+#5 DONE 0.0s
+
+#6 [3/6] ADD https://templatemo.com/download/templatemo_589_lugx_gaming /var/www/html/
+#6 DONE 0.6s
+
+#7 [2/6] RUN yum install -y httpd zip unzip
+#7 CACHED
+
+#8 [3/6] ADD https://templatemo.com/download/templatemo_589_lugx_gaming /var/www/html/
+#8 CACHED
+
+#9 [4/6] WORKDIR /var/www/html
+#9 CACHED
+
+#10 [5/6] RUN ls -lrt /var/www/html
+#10 0.166 total 1620
+#10 0.166 -rw------- 1 root root 1658530 Apr 15  2023 templatemo_589_lugx_gaming
+#10 DONE 0.2s
+
+#11 [6/6] RUN rm -rf templatemo_589_lugx_gaming
+#11 DONE 0.2s
+
+#12 exporting to image
+#12 exporting layers 0.1s done
+#12 writing image sha256:f9a6578285c9beffb8d0e42400d9bd858a94edf20300fbb7fd4349372a9e4ae4 done
+#12 naming to docker.io/library/scripted_pipeline:v1.44 done
+#12 DONE 0.1s
+[8mha:////4I/Yc1KlW1xorItrUkFGl39jNNlql9FUUO4PEf2T7X6UAAAAox+LCAAAAAAAAP9tjTESwiAURH/iWNhaeggyGUvHypah8QSYIEKY/wkQSeWJvJp3EM2MlVvs7NvmPV+wjgGOFDSzCgeDsTPMu0mXxTKF4eooM0sX1hFGcooJlQX16rSgoKRgSVXDisNGYecoGtQJttzKu2ycRN2cUyjfgUNt+hEeUPFiTjKkL8wBdrepj4Q/z18BzD5B3baf2vs35DNwLL4AAAA=[0m[Pipeline] sh
++ docker image tag scripted_pipeline:v1.44 hshinde1301/scripted_pipeline:v1.44
+[8mha:////4EB4RqIPp7sbwvK2nY2YDWzxtc0/lqUEAq53ov1gnWQRAAAApB+LCAAAAAAAAP9tjbEOwiAURV9rHFwd/QiaJm7GyZWw+AXYIkLJexSodPKL/DX/QbSJk3e4uecu5/mCdQxwpKCZVTgYjJ1h3k26LJYpDFdHmVm6sI4wklNMqCyoV6cFBSUFS6oaVhw2CjtH0aBOsOVW3mXjJOrmnEL5Dhxq04/wgIoXc5IhfWEOsLtNfST8ef4KYPYJ6rb91N6/ASOlMWO+AAAA[0m[Pipeline] sh
++ docker image tag scripted_pipeline:v1.44 hshinde1301/scripted_pipeline:latest
+[8mha:////4NHj54QTuyfWEV0IG1ZPs6tHaxFsZ/0KZGNHzQC+xMtaAAAAox+LCAAAAAAAAP9tjTESwiAURH/iWNhaeggyKawcK1uGxhNggghh/idAJJUn8mreQTQzVm6xs2+b93zBOgY4UtDMKhwMxs4w7yZdFssUhqujzCxdWEcYySkmVBbUq9OCgpKCJVUNKw4bhZ2jaFAn2HIr77JxEnVzTqF8Bw616Ud4QMWLOcmQvjAH2N2mPhL+PH8FMHufoG73n2rfnAYgMb4AAAA=[0m[Pipeline] }
+[8mha:////4BMMb3j1bT05RxcP5SyTf1+ylb+p4BRp7Xt1HdGSAF5PAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICDQ2iSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwhQ7nbf2r7BqREs8C+AAAA[0m[Pipeline] // stage
+[8mha:////4FVqjbVocHQN841t7g1modGQXVUvtC4ypqHMojowl/KUAAAApx+LCAAAAAAAAP9tjTEOwjAQBM9BKWgpeYQjJCQKREVrueEFJjbGiXUX7AtJxYv4Gn8gEImKrXZWWs3zBWVOcKDkZeOwDZjrILvY+6nJgVJ7iTTIhs6yJswUndRu0GTdcUZN7GCOKGChYOmwjpQDeoaVaszdVNGgr06cpm2voAj2Bg8QajKzSfyFMcH62ttM+PP8FcDYMYgtQ7HZfY7lGw7UL0zBAAAA[0m[Pipeline] stage
+[8mha:////4H51oS57KXIZq9TLqroveieWs8XtSaOlY1kOmg73iYeVAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUTCAhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD0rlhNLCAAAA[0m[Pipeline] { ( Push image to dockerhub)
+[8mha:////4JhXR0hbfEUPo4+4OgbrpnYwKI5rbtyb+YpzmHa/pwQXAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUbCDE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5Dv9rMd5mfxASnCIIrCAAAA[0m[Pipeline] withCredentials
+Masking supported pattern matches of $dockerhub_pwd
+[8mha:////4Hiq1I9UOyalDLXF3WsDvumeul+pcsY1bEMB9pIDLundAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycogU2BDqxBp14QShCSFp9H9JUtKJE3E17kCgEhMeLNuS9Z4vqIKHhrxmVmFvMHSGDW7UObFEvr84SszSmXWEgZxirUotSXWca0tRwayihAWHpcLOUTCoI6y4FXdRO4G6PkWftwOH0sgbPKDgmRyFj98yeVhfRxkIf5y/AJiGCOV2n223+TyrN7xWSV3CAAAA[0m[Pipeline] {
+[8mha:////4O0OFEPdZV0QMRqfLEXx65ppOSSItNmJdejtEuawkrCDAAAAox+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICtIgqreWGF5jYGCfWnbEdkooX8TX+QCASFVusdraZ5wuWKcKRo8XWUOcoNQ6D7+20cODYXTwP2PIZG6bE3qA0g2Rt6hklZwNzihIWAlaGGs/Jkc2wFq26q8orstUpx+k7CCidvsEDCjGZs4r5C2OEzbXXienn+SuAMWQo99tP7cIbaOP4NL4AAAA=[0m[Pipeline] sh
++ docker login -u hshinde1301 -p ****
+WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+Login Succeeded
+[8mha:////4LA1oyKh+BwmdW/fRyapcCUUSONVUdagBRaHHqejCVexAAAAox+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKC0iIqWisNLzCJMXasO8d2cCpexNf4A4FIVGyx2tlmni9YxwBHDhqtot5QbA16N+p5YebQXx1ntHzBlimyU9io3HCnTgs2nBQsKUpYCdgoah1HQzrBVlh5l5WTpKtzCvN3EFCaboAHFGI2JxnSF6YAu9vYRaaf568AJp+grPefqv0bq7DVH74AAAA=[0m[Pipeline] sh
++ docker image push hshinde1301/scripted_pipeline:v1.44
+The push refers to repository [docker.io/hshinde1301/scripted_pipeline]
+14a8279315ac: Preparing
+eeb836f4ea1f: Preparing
+5f70bf18a086: Preparing
+f395c803c94c: Preparing
+d6af3faa5ed3: Preparing
+cb13619f66a4: Preparing
+cb13619f66a4: Waiting
+f395c803c94c: Layer already exists
+5f70bf18a086: Layer already exists
+d6af3faa5ed3: Layer already exists
+cb13619f66a4: Layer already exists
+eeb836f4ea1f: Pushed
+14a8279315ac: Pushed
+v1.44: digest: sha256:8dd0fb1c9ca506b44a446550da2930302b9295e3a6a0b90d37c69a7fa831660f size: 1573
+[8mha:////4O7EU8UpPsFuDOVGQ4P6b/8mXx/TX0mn7rS4DSKOmQGrAAAAox+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKCoERUaS03vMDExjix7oztkFS8iK/xBwKRqNhitbPNPF+wTBGOHC22hjpHqXEYfG+nhQPH7uJ5wJbP2DAl9galGSRrU88oORuYU5SwELAy1HhOjmyGtWjVXVVeka1OOU7fQUDp9A0eUIjJnFXMXxgjbK69Tkw/z18BjCFDudt+ah/e6oHOBr4AAAA=[0m[Pipeline] sh
++ docker image push hshinde1301/scripted_pipeline:latest
+The push refers to repository [docker.io/hshinde1301/scripted_pipeline]
+14a8279315ac: Preparing
+eeb836f4ea1f: Preparing
+5f70bf18a086: Preparing
+f395c803c94c: Preparing
+d6af3faa5ed3: Preparing
+cb13619f66a4: Preparing
+cb13619f66a4: Waiting
+5f70bf18a086: Layer already exists
+f395c803c94c: Layer already exists
+d6af3faa5ed3: Layer already exists
+eeb836f4ea1f: Layer already exists
+14a8279315ac: Layer already exists
+cb13619f66a4: Layer already exists
+latest: digest: sha256:8dd0fb1c9ca506b44a446550da2930302b9295e3a6a0b90d37c69a7fa831660f size: 1573
+[8mha:////4GKxuZStXaQ59MlTjEQip3TG2QAKKCVYDX7JekIh7rX3AAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKCEB2iSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwZyt32U/vwBi0Xj0m+AAAA[0m[Pipeline] sh
++ docker image rmi scripted_pipeline:v1.44 hshinde1301/scripted_pipeline:v1.44 hshinde1301/scripted_pipeline:latest
+Untagged: scripted_pipeline:v1.44
+Untagged: hshinde1301/scripted_pipeline:v1.44
+Untagged: hshinde1301/scripted_pipeline:latest
+Untagged: hshinde1301/scripted_pipeline@sha256:8dd0fb1c9ca506b44a446550da2930302b9295e3a6a0b90d37c69a7fa831660f
+Deleted: sha256:f9a6578285c9beffb8d0e42400d9bd858a94edf20300fbb7fd4349372a9e4ae4
+[8mha:////4G9HbnJ1xY8I+CbrOaNAvoA1ZW4TJTTOfAYZDOQVBI/zAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKCkKgQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGMIGcrd/lPbN1R/4ly+AAAA[0m[Pipeline] }
+[8mha:////4LwuahZ7kfEXXBSvOi0BiTTGfQpE239qX+IObCfPDggEAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiKJAQSkVrueEFJjHGiXUXbAen4kV8jT9gEYmKLVY728zrDcvgoWZvsNPUWwqNxcGNJi9M7Pur44QdX7BhCuw0Sp0kt/o0o+SoYU5RwkLASlPjOFgyEdaiUw9VOUWmOkefv6OA0rZ3eEIhsjkqH78wedjcxjYw/Tx/BTANQ4Ryt8+1PXwAneaHiL4AAAA=[0m[Pipeline] // withCredentials
+[8mha:////4NwDjTPzcqIjAgsTrCk54p034oIFDLBvA1i+LthSl4rrAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiaEBCqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFDu9rm2hw+uBdw0vgAAAA==[0m[Pipeline] }
+[8mha:////4GYLMedklUIzk6XBJF5MDvQMfLJoMiTQh/WcEgHKC6z5AAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiaEBCqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFDuDrm2+w/qqjVVvgAAAA==[0m[Pipeline] // stage
+[8mha:////4LJ3n6a9U9y2ctmzaogBTaEKQfcr3rZNEoAs+cwjwbRsAAAApx+LCAAAAAAAAP9tjTEOwjAQBM9BKWgpeYQjIRqEqGgtN7zAxMY4se6CfSGpeBFf4w8EIlGx1c5Kq3m+oMwJDpS8bBy2AXMdZBd7PzU5UGovkQbZ0FnWhJmik9oNmqw7zqiJHcwRBSwULB3WkXJAz7BSjbmbKhr01YnTtO0VFMHe4AFCTWY2ib8wJlhfe5sJf56/Ahg7BrFlKDa7z7F8A+OvzUfBAAAA[0m[Pipeline] stage
+[8mha:////4Bzu+8q/NBHzymocFRPLM6CzZMmU6SdMQPMJarmuVOH+AAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycogUwYRQJ9aoCycITQhJo/9LkpJOnIircQcClZjwYNmWrPd8QRU8NOQ1swp7g6EzbHCjzokl8v3FUWKWzqwjDOQUa1VqSarjXFuKCmYVJSw4LBV2joJBHWHFrbiL2gnU9Sn6vB04lEbe4AEFz+QofPyWycP6OspA+OP8BcA0RCi3+2y7zedZvQH4j6CMwgAAAA==[0m[Pipeline] { (deploy docker container )
+[8mha:////4LmLxL4UCn874wAD4bYTTbpXz12XGtTtujN09UO8zjeSAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycogUxIiYukZZOEFoQkgb/V9+UtqJE3E17kBLJSY8WLYl673eUESGE7ETjcXWY6y96ELvpiQG4vYaaBANXURNGClYoeygyNhqqYqShUVZDisJa4t1oOjRJdjIRj90GTS68px42o4Scm/u8IRMTuSkOX3LyLC99SYS/jh/ATB2CfLDbrb9/Cw+ty4Up8IAAAA=[0m[Pipeline] sshagent
+[ssh-agent] Using credentials root (dockerhost_cred)
+$ ssh-agent
+SSH_AUTH_SOCK=/tmp/ssh-LDL8e3C3NNOc/agent.36394
+SSH_AGENT_PID=36397
+Running ssh-add (command line suppressed)
+Identity added: /var/lib/jenkins/workspace/scripted_pipeline@tmp/private_key_9055198823065752934.key (root@ip-172-31-34-128)
+[ssh-agent] Started.
+[8mha:////4Fivj/ZuCm/gfOMn2sdnUfLatUHZ1EvcdO3CoA0mILmmAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUwIiYukZZOEFoQkgb/V9+UtqJE3E17kBLJSY8WLYl673eUESGE7ETjcXWY6y96ELvpiQG4vYaaBANXURNGClYoeygyNhqqYqShUVZDisJa4t1oOjRJdjIRj90GTS68px42o4Scm/u8IRMTuSkOX3LyLC99SYS/jh/ATB2CfLDbrb9/Cw+2YMO4MIAAAA=[0m[Pipeline] {
+[8mha:////4COQtnF10+JVahJEfl6CtmOazi+3zOtK3Xw/zM2SjQvyAAAAox+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIikRJR0VppeIFJjLFj3Tm2g1PxIr7GHwhEomKL1c4283zBOgY4ctBoFfWGYmvQu1HPCzOH/uo4o+ULtkyRncJG5YY7dVqw4aRgSVHCSsBGUes4GtIJtsLKu6ycJF2dU5i/g4DSdAM8oBCzOcmQvjAF2N3GLjL9PH8FMPkEZb3/VO3favo5XL4AAAA=[0m[Pipeline] sh
++ ssh -o StrictHostKeyChecking=no root@172.31.34.128 docker container rm -f cloudtest
+cloudtest
+[8mha:////4Afld69Hf3gW8IIjLdbG5X4Qd2ln2xNsl16Tnd+PcpR8AAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiAR2iSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwZyt32U/vwBq1seBO+AAAA[0m[Pipeline] sh
++ ssh -o StrictHostKeyChecking=no root@172.31.34.128 docker image rmi hshinde1301/scripted_pipeline
+Untagged: hshinde1301/scripted_pipeline:latest
+Untagged: hshinde1301/scripted_pipeline@sha256:4cd36e0c66357377902800139779d71253de1a27b86b244ff7ef69305bbf13b0
+Deleted: sha256:701f9068eac1139c217a9a1ede7dc7d3ba236a2b65b0b765002d6b3974c40caf
+Deleted: sha256:3d9286e2cb77eca8031c903d8207183f1f92fa81de78e04ca0dfca7a9cc23948
+Deleted: sha256:0234ecf5f669108730cd550479f3d84eaf181e9f01e6c22019a91c451d3ada16
+Deleted: sha256:9cefd68a4828e6751204cb6c9f1daa3a917343ddcabefcd0f171e3449b8c996c
+Deleted: sha256:c8813306f98553bc7bfa998664698dde43becdaac1aecf7b3933c05b733cb893
+Deleted: sha256:cb13619f66a4cc15f82b64d046bf46a564ce6f7e018c021520335b6b7e5ef67e
+[8mha:////4O3VSDtO9NWHiXClYGWs7/QaHv11V8xobpCu7fdK1fD9AAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIigagQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGPIUO62n9qHN+xdYwq+AAAA[0m[Pipeline] sh
++ ssh -o StrictHostKeyChecking=no root@172.31.34.128 docker run -p 8000:80 -d --name cloudtest hshinde1301/scripted_pipeline:latest
+Unable to find image 'hshinde1301/scripted_pipeline:latest' locally
+latest: Pulling from hshinde1301/scripted_pipeline
+81f7f53f2745: Pulling fs layer
+ec88a269259f: Pulling fs layer
+99c69ea9c0e7: Pulling fs layer
+4f4fb700ef54: Pulling fs layer
+842a60c50d30: Pulling fs layer
+2a8edd862560: Pulling fs layer
+4f4fb700ef54: Waiting
+842a60c50d30: Waiting
+2a8edd862560: Waiting
+99c69ea9c0e7: Verifying Checksum
+99c69ea9c0e7: Download complete
+4f4fb700ef54: Verifying Checksum
+4f4fb700ef54: Download complete
+81f7f53f2745: Verifying Checksum
+81f7f53f2745: Download complete
+842a60c50d30: Verifying Checksum
+842a60c50d30: Download complete
+2a8edd862560: Verifying Checksum
+2a8edd862560: Download complete
+ec88a269259f: Verifying Checksum
+ec88a269259f: Download complete
+81f7f53f2745: Pull complete
+ec88a269259f: Pull complete
+99c69ea9c0e7: Pull complete
+4f4fb700ef54: Pull complete
+842a60c50d30: Pull complete
+2a8edd862560: Pull complete
+Digest: sha256:8dd0fb1c9ca506b44a446550da2930302b9295e3a6a0b90d37c69a7fa831660f
+Status: Downloaded newer image for hshinde1301/scripted_pipeline:latest
+f1b396ff7afc11a509f64bc4fdab0635c4c4f35fd2801c62b18250f13945eb8a
+[8mha:////4O3lt2Lm3kGF6ckAHOXaJtN4MS47XzJwT6IR6oXrj3GwAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIigUSDqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDyFDu9p/avgEjVhSLvgAAAA==[0m[Pipeline] }
+$ ssh-agent -k
+unset SSH_AUTH_SOCK;
+unset SSH_AGENT_PID;
+echo Agent pid 36397 killed;
+[ssh-agent] Stopped.
+[8mha:////4AJwSlbbeXoB+FsmO3IYUIdTgnVUtK750bpsSRUxe91aAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiREGBqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDyFDu9p/avgE81EHZvgAAAA==[0m[Pipeline] // sshagent
+[8mha:////4DTqT7ZvJOENnTedkiuvvFNvQ5ieqqoGSTqVpkbSrV7RAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKCRIOEqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDyFDu9p/avgF/VhBfvgAAAA==[0m[Pipeline] }
+[8mha:////4Li6WMBweejeo5E76WEr907Ld2LqK/iSiDBooBhl3CxZAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiQRUhqrRWGl5gYmOcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThwM9poGS7Gz6N1o8sKJw3B1PGHPF+yYIjuNrZ5aVrpZsOWkYUlRwkrARlPnOFoyCbailw9ZOUmmOqeQv6OA0qo7PKEQ2ZxkSF+YA+xuo4pMP89fAczeJygPda59/QE/DIv0vgAAAA==[0m[Pipeline] // stage
+[8mha:////4MKdVLeh/b4O2rPWXV2oj7LzZvc66knD9i2h3EUs5KHfAAAAoh+LCAAAAAAAAP9tjTESgjAQRT84FraWHiJY0DlWthkaTxAhxkBmF5NFqDyRV/MOMjJj5a/+e817vbFOEUeOTrWWOk+p9qoPg5ufGjl218CjavmiaqbEwarKjhU39rRgxWKxLMux0thYqgMnT06w1a15mCIYcsVZ4uwOGrlv7ngi03NZTJQvTBG729Akpl/nbwBT3wvyci/Iyg82uoiCvQAAAA==[0m[Pipeline] }
+[8mha:////4FbQLZhRk/MypERDYoGNC+THlPqRPpsT3wR0zCQW3cBSAAAAox+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMIRgg5R0VppeIFJjHFi3QX7QlLxIr7GH4iIRMVWO9PM641lijhydKqx1HpKlVdd6N301MCxvQYeVMMXVTElDlaVdii5tqcZSxaLeVmOhcbKUhU4eXKCtW7MwxTBkCvOEid30Mh9fccTmZ7KYqJ8YYzY3Po6Mf06fwMYu06Q77eCbPcBJQaMIb0AAAA=[0m[Pipeline] // node
+[8mha:////4H+ZvNHx9FmVK5ACghCJ7vhGnqlxcPnSONXtc1/yMZqnAAAAox+LCAAAAAAAAP9tjbEOgjAURS8YB1dHP6IkxM04uTYsfkGFWgvNe9g+hMkv8tf8B4kkTt7pnrOc1xvrFHHk6FRrqfOUaq/6MLj5qZFjdw08qpYvqmZKHKyq7FhxY08LViwWy7IcK42NpTpw8uQEW92ahymCIVecJc7uoJH75o4nMj2XxUT5whSxuw1NYvp1/gYw9b0g35eCrPwAY0wrEb0AAAA=[0m[Pipeline] End of Pipeline
+Finished: SUCCESS

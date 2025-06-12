@@ -1,0 +1,173 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-build plugin="workflow-job@1532.va_9a_d244074a_3">
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>admin</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <jenkins.metrics.impl.TimeInQueueAction plugin="metrics@4.2.32-476.v5042e1c1edd7">
+      <queuingDurationMillis>1</queuingDurationMillis>
+      <blockedDurationMillis>0</blockedDurationMillis>
+      <buildableDurationMillis>0</buildableDurationMillis>
+      <waitingDurationMillis>0</waitingDurationMillis>
+    </jenkins.metrics.impl.TimeInQueueAction>
+    <org.jenkinsci.plugins.workflow.libs.LibrariesAction plugin="pipeline-groovy-lib@752.vdddedf804e72">
+      <libraries/>
+    </org.jenkinsci.plugins.workflow.libs.LibrariesAction>
+    <hudson.plugins.git.util.BuildData plugin="git@5.7.0">
+      <buildsByBranchName>
+        <entry>
+          <string>refs/remotes/origin/main</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@6.1.3">
+              <sha1>853460bb34cec375cd18608c97ee59c2da74c409</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>refs/remotes/origin/main</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision reference="../marked"/>
+            <hudsonBuildNumber>43</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+      </buildsByBranchName>
+      <lastBuild reference="../buildsByBranchName/entry/hudson.plugins.git.util.Build"/>
+      <remoteUrls>
+        <string>https://github.com/hshinde1301/cloudtest.git</string>
+      </remoteUrls>
+    </hudson.plugins.git.util.BuildData>
+    <org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState plugin="workflow-scm-step@437.v05a_f66b_e5ef8">
+      <revisionStates>
+        <entry>
+          <string>git https://github.com/hshinde1301/cloudtest.git</string>
+          <hudson.scm.SCMRevisionState_-None/>
+        </entry>
+      </revisionStates>
+    </org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState>
+    <com.cloudbees.plugins.credentials.builds.CredentialsParameterBinder plugin="credentials@1415.v831096eb_5534">
+      <boundCredentials class="concurrent-hash-map"/>
+    </com.cloudbees.plugins.credentials.builds.CredentialsParameterBinder>
+    <jenkins.metrics.impl.SubTaskTimeInQueueAction plugin="metrics@4.2.32-476.v5042e1c1edd7">
+      <queuingDurationMillis>10</queuingDurationMillis>
+      <blockedDurationMillis>0</blockedDurationMillis>
+      <buildableDurationMillis>9</buildableDurationMillis>
+      <waitingDurationMillis>0</waitingDurationMillis>
+      <executingDurationMillis>29006</executingDurationMillis>
+      <workUnitCount>1</workUnitCount>
+    </jenkins.metrics.impl.SubTaskTimeInQueueAction>
+  </actions>
+  <queueId>85</queueId>
+  <timestamp>1749675659370</timestamp>
+  <startTime>1749675659377</startTime>
+  <result>SUCCESS</result>
+  <duration>29137</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
+    <result>SUCCESS</result>
+    <script>node {
+    stage(&quot;pull source code from scm&quot;){
+        git branch: &apos;main&apos;, url: &apos;https://github.com/hshinde1301/cloudtest.git&apos;
+    }
+    
+    stage (&quot; Build Docker file&quot;) {
+        sh &apos;docker image build -t $JOB_NAME:v1.$BUILD_ID .&apos;
+        sh &apos;docker image tag $JOB_NAME:v1.$BUILD_ID hshinde1301/$JOB_NAME:v1.$BUILD_ID &apos;
+        sh &apos;docker image tag $JOB_NAME:v1.$BUILD_ID hshinde1301/$JOB_NAME:latest&apos; 
+    } 
+    
+    stage (&quot; Push image to dockerhub&quot;) {
+        withCredentials([string(credentialsId: &apos;dockerhub_pwd&apos;, variable: &apos;dockerhub_pwd&apos;)]) {
+        sh &apos;docker login -u hshinde1301 -p ${dockerhub_pwd}&apos;
+        sh &apos;docker image push hshinde1301/$JOB_NAME:v1.$BUILD_ID &apos;
+        sh &apos;docker image push hshinde1301/$JOB_NAME:latest&apos; 
+        sh &apos;docker image rmi $JOB_NAME:v1.$BUILD_ID hshinde1301/$JOB_NAME:v1.$BUILD_ID hshinde1301/$JOB_NAME:latest &apos;
+}
+        
+    }
+    stage (&quot;deploy docker container &quot;) {
+        def dockerrun = &apos;docker run -p 8000:80 -d --name cloudtest hshinde1301/scripted_pipeline:latest&apos;
+        def dockerd = &apos;docker container rm -f cloudtest&apos;
+        def dockrdimg = &apos;docker image rmi hshinde1301/scripted_pipeline &apos;
+        sshagent([&apos;dockerhost_cred&apos;]) {
+            sh &quot;ssh -o StrictHostKeyChecking=no root@172.31.34.128 ${dockerd}&quot;
+            sh &quot;ssh -o StrictHostKeyChecking=no root@172.31.34.128 ${dockrdimg}&quot;
+            sh &quot;ssh -o StrictHostKeyChecking=no root@172.31.34.128 ${dockerrun}&quot;
+             
+}
+    }
+}</script>
+    <loadedScripts class="linked-hash-map"/>
+    <durabilityHint>MAX_SURVIVABILITY</durabilityHint>
+    <timings class="map">
+      <entry>
+        <string>flowNode</string>
+        <long>510626379</long>
+      </entry>
+      <entry>
+        <string>classLoad</string>
+        <long>4425232</long>
+      </entry>
+      <entry>
+        <string>runQueue</string>
+        <long>1119832091</long>
+      </entry>
+      <entry>
+        <string>run</string>
+        <long>1211552271</long>
+      </entry>
+      <entry>
+        <string>parse</string>
+        <long>15756645</long>
+      </entry>
+      <entry>
+        <string>saveProgram</string>
+        <long>361072484</long>
+      </entry>
+    </timings>
+    <internalCalls class="sorted-set"/>
+    <sandbox>true</sandbox>
+    <iota>42</iota>
+    <head>1:42</head>
+    <done>true</done>
+    <resumeBlocked>false</resumeBlocked>
+    <storageDir>workflow-completed</storageDir>
+  </execution>
+  <completed>true</completed>
+  <checkouts class="hudson.util.PersistedList">
+    <org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+      <scm class="hudson.plugins.git.GitSCM" plugin="git@5.7.0">
+        <configVersion>2</configVersion>
+        <userRemoteConfigs>
+          <hudson.plugins.git.UserRemoteConfig>
+            <url>https://github.com/hshinde1301/cloudtest.git</url>
+          </hudson.plugins.git.UserRemoteConfig>
+        </userRemoteConfigs>
+        <branches class="singleton-list">
+          <hudson.plugins.git.BranchSpec>
+            <name>*/main</name>
+          </hudson.plugins.git.BranchSpec>
+        </branches>
+        <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+        <submoduleCfg class="empty-list"/>
+        <extensions>
+          <hudson.plugins.git.extensions.impl.LocalBranch>
+            <localBranch>main</localBranch>
+          </hudson.plugins.git.extensions.impl.LocalBranch>
+        </extensions>
+      </scm>
+      <node></node>
+      <workspace>/var/lib/jenkins/workspace/scripted_pipeline</workspace>
+      <changelogFile>/var/lib/jenkins/jobs/scripted_pipeline/builds/43/changelog5271248159852704175.xml</changelogFile>
+      <pollingBaseline class="hudson.scm.SCMRevisionState$None" reference="../../../actions/org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState/revisionStates/entry/hudson.scm.SCMRevisionState_-None"/>
+    </org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+  </checkouts>
+</flow-build>

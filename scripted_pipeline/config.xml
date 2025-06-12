@@ -1,0 +1,57 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@1532.va_9a_d244074a_3">
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty plugin="gitlab-plugin@1.9.8">
+      <gitLabConnection></gitLabConnection>
+      <jobCredentialId></jobCredentialId>
+      <useAlternativeCredential>false</useAlternativeCredential>
+    </com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty>
+    <org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty>
+      <triggers>
+        <com.cloudbees.jenkins.GitHubPushTrigger plugin="github@1.43.0">
+          <spec></spec>
+        </com.cloudbees.jenkins.GitHubPushTrigger>
+      </triggers>
+    </org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty>
+  </properties>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@4106.v7a_8a_8176d450">
+    <script>node {
+    stage(&quot;pull source code from scm&quot;){
+        git branch: &apos;main&apos;, url: &apos;https://github.com/hshinde1301/cloudtest.git&apos;
+    }
+    
+    stage (&quot; Build Docker file&quot;) {
+        sh &apos;docker image build -t $JOB_NAME:v1.$BUILD_ID .&apos;
+        sh &apos;docker image tag $JOB_NAME:v1.$BUILD_ID hshinde1301/$JOB_NAME:v1.$BUILD_ID &apos;
+        sh &apos;docker image tag $JOB_NAME:v1.$BUILD_ID hshinde1301/$JOB_NAME:latest&apos; 
+    } 
+    
+    stage (&quot; Push image to dockerhub&quot;) {
+        withCredentials([string(credentialsId: &apos;dockerhub_pwd&apos;, variable: &apos;dockerhub_pwd&apos;)]) {
+        sh &apos;docker login -u hshinde1301 -p ${dockerhub_pwd}&apos;
+        sh &apos;docker image push hshinde1301/$JOB_NAME:v1.$BUILD_ID &apos;
+        sh &apos;docker image push hshinde1301/$JOB_NAME:latest&apos; 
+        sh &apos;docker image rmi $JOB_NAME:v1.$BUILD_ID hshinde1301/$JOB_NAME:v1.$BUILD_ID hshinde1301/$JOB_NAME:latest &apos;
+}
+        
+    }
+    stage (&quot;deploy docker container &quot;) {
+        def dockerrun = &apos;docker run -p 8000:80 -d --name cloudtest hshinde1301/scripted_pipeline:latest&apos;
+        def dockerd = &apos;docker container rm -f cloudtest&apos;
+        def dockrdimg = &apos;docker image rmi hshinde1301/scripted_pipeline &apos;
+        sshagent([&apos;dockerhost_cred&apos;]) {
+            sh &quot;ssh -o StrictHostKeyChecking=no root@172.31.34.128 ${dockerd}&quot;
+            sh &quot;ssh -o StrictHostKeyChecking=no root@172.31.34.128 ${dockrdimg}&quot;
+            sh &quot;ssh -o StrictHostKeyChecking=no root@172.31.34.128 ${dockerrun}&quot;
+             
+}
+    }
+}</script>
+    <sandbox>true</sandbox>
+  </definition>
+  <triggers/>
+  <disabled>false</disabled>
+</flow-definition>
